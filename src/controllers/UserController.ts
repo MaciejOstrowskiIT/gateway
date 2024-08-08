@@ -27,6 +27,7 @@ export class UserController implements IController {
 	public async getUserData(req: Request, res: Response):Promise<void> {
 		try{
 			console.log("getUserData req.params",req.params );
+			console.log("users data");
 			const response = await axios.get( `${this.api}/get-user-data/${req.params.userID}` );
 			response.status !== 200
 				? new Error("Internal server error")

@@ -12,7 +12,7 @@ export class AuthController extends ResponseHandler {
     const { username, email, password, accountId, status } = req.body;
 
     try {
-      const response = await axios.post(`${this.api}/signup`, {
+      const response = await axios.post(`${this.api}/register`, {
         username,
         email,
         password,

@@ -14,6 +14,7 @@ export class TransactionsController {
 				:	res.status(200).send(response.data)
 		}
 		catch(err){
+			console.log(err)
 			res.status(500).json({error: "Internal server error", details: (err as Error).message})
 		}
 	}
@@ -36,7 +37,7 @@ export class TransactionsController {
 	// public async createTransaction(req: Request, res: Response) {
 	// 	try {
 	// 		const { debit, credit, value, senderName, senderAccount, receiverName, receiverAccount } = req.body;
-	// 		const transaction: Transaction = {
+	// 		const transaction: User = {
 	// 			debit,
 	// 			credit,
 	// 			date: new Date().toISOString(),

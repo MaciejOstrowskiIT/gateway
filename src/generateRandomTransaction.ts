@@ -17,7 +17,7 @@
 // 	return { name, account };
 // } );
 //
-// private generateRandomTransaction(): Transaction {
+// private generateRandomTransaction(): User {
 // 	const getRandomDate = (): Date => {
 // 		const start = new Date( 2000, 0, 1 ).getTime();
 // 		const end = new Date().getTime();
@@ -46,7 +46,7 @@
 // public async setData(req: Request, res: Response) {
 // 	try {
 // 		const numberOfTransactions = 20;
-// 		const transactions: Transaction[] = [];
+// 		const transactions: User[] = [];
 //
 // 		for ( let i = 0; i < numberOfTransactions; i++ ) {
 // 			const transaction = this.generateRandomTransaction();
