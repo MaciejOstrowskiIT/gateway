@@ -9,15 +9,13 @@ export class AuthController extends ResponseHandler {
   }
 
   public async signup(req: Request, res: Response): Promise<void> {
-    const { username, email, password, accountId, status } = req.body;
+    const { username, email, password } = req.body;
 
     try {
       const response = await axios.post(`${this.api}/register`, {
         username,
         email,
         password,
-        accountId,
-        status,
       });
       res.status(response.status).send(response.data);
     } catch (err) {
