@@ -14,9 +14,9 @@ app.use(
 
 (async (): Promise<void> => {
   try {
-    const exchanges: Exchange[] = [{ name: 'transactions', queues: ['create-transactions'] }];
-    const amqp = new AMQP(exchanges, 'gateway');
-    await amqp.config();
+    // const exchanges: Exchange[] = [{ name: 'transactions', queues: ['create-transactions'] }];
+    // const amqp = new AMQP(exchanges, 'gateway');
+    // await amqp.config();
     app.listen(process.env.PORT, (): void => {
       logger('info', `[Gateway] Working at port ${process.env.PORT}`);
     });
